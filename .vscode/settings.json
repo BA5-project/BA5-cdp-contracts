@@ -1,0 +1,10 @@
+{
+    "woke.compiler.solc.remappings": [
+        "@openzeppelin/=lib/openzeppelin-contracts/",
+        "@quickswap/=lib/@quickswap/contracts/",
+        "@uniswap/=lib/@uniswap/",
+        "@zkbob/=lib/zkbob-contracts/src/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "forge-std/=lib/forge-std/src/"
+    ]
+}
