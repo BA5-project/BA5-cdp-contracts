@@ -9,6 +9,7 @@ remappings = [
     '@zkbob/=lib/zkbob-contracts/src/',
     'ds-test/=lib/forge-std/lib/ds-test/src/',
     'forge-std/=lib/forge-std/src/',
+    '@LayerZero/=lib/solidity-examples/contracts/',
 ]
 auto_detect_remappings = false
 optimizer = true
