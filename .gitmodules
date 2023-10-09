@@ -21,3 +21,6 @@
 	path = lib/zkbob-contracts
 	url = https://github.com/zkbob/zkbob-contracts
 	branch = 0cb731c
+[submodule "lib/solidity-examples"]
+	path = lib/solidity-examples
+	url = https://github.com/LayerZero-Labs/solidity-examples
