@@ -4,6 +4,9 @@ pragma solidity ^0.8.0;
 
 import "@LayerZero/token/oft/v2/OFTV2.sol";
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
+import '@zkbob/token/ERC677.sol';
+import '@zkbob/token/ERC20Permit.sol';
+import '@openzeppelin/contracts/access/Ownable.sol';
 
 
 /// @title A LayerZero OmnichainFungibleToken example of BasedOFT

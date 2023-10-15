@@ -20,6 +20,8 @@ import "./libraries/UniswapV3FeesCalculation.sol";
 import "./utils/VaultAccessControl.sol";
 import "./interfaces/ITreasury.sol";
 import "./interfaces/IMinter.sol";
+import {EclypseUSD} from "./EclypseUSD.sol";
+import {IEclypseUSD} from "./interfaces/IEclypseUSD.sol";
 
 /// @notice Contract of the system vault manager
 contract Vault is EIP1967Admin, VaultAccessControl, IERC721Receiver, ICDP, Multicall, ReentrancyGuard {
@@ -89,7 +91,10 @@ contract Vault is EIP1967Admin, VaultAccessControl, IERC721Receiver, ICDP, Multi
     INFTOracle public immutable oracle;
 
     /// @notice Bob Stable Token
-    IBobToken public immutable token;
+    IEclypseUSD public immutable token;
+
+    /// @notice Eusd Stable Token
+    //EclypseUSD public immutable token;
 
     /// @notice Minter Contract
     IMinter public immutable minter;
@@ -180,7 +185,8 @@ contract Vault is EIP1967Admin, VaultAccessControl, IERC721Receiver, ICDP, Multi
         positionManager = positionManager_;
         oracle = oracle_;
         treasury = ITreasury(treasury_);
-        token = IBobToken(token_);
+        token = IEclypseUSD(token_);
+        //token = EclypseUSD(token_);
         minter = IMinter(minter_);
         vaultRegistry = IVaultRegistry(vaultRegistry_);
         isInitialized = true;
